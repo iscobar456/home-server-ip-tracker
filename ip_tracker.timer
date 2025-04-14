@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs the ip_tracker service
+
+[Timer]
+OnCalendar=*-*-* 04:00:00
+Unit=ip_tracker.service
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Routinely stores IP address locally and logs it to an S3 bucket when a IP reassignment is detected
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update_ip
+Restart=on-failure
+
