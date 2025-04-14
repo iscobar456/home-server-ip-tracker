@@ -26,7 +26,7 @@ echo "    - creating state file..."
 if [[ ! -f /var/lib/misc/current_ip ]]; then
 	sudo touch /var/lib/misc/current_ip
 fi
-sudo chmod 770 /var/lib/misc/current_ip
+sudo chmod 666 /var/lib/misc/current_ip
 
 echo "    - reloading systemd..."
 sudo systemctl daemon-reload

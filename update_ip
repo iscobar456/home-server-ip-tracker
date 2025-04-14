@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # File to store the current IP
-IP_FILE="/var/lib/misc/current_ip.txt"
-S3_URI="s3://isaac-spencer-misc/home_server_IPs/raspberrypi.txt"
+IP_FILE="/var/lib/misc/current_ip"
+S3_URI="s3://isaac-spencer-misc/home_server_IPs/$(cat /etc/hostname).txt"
 
 # Fetch current public IP
 CURRENT_IP=$(curl -s https://ifconfig.me)
